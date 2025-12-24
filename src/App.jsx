@@ -7,6 +7,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Nav from './components/common/nav/nav'
 import Fullnav from './components/common/nav/Fullnav'
+import Footer from './components/common/footer'
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/agent' element={<Agent />} />
         <Route path='/project' element={<Project />} />    
       </Routes>
+      <Footer />
       
     </div>
   )
