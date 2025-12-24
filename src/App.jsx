@@ -8,7 +8,7 @@ import gsap from 'gsap'
 import Nav from './components/common/nav/nav'
 import Fullnav from './components/common/nav/Fullnav'
 import Footer from './components/common/footer'
-
+import Other from './pages/other'
 
 
 const App = () => {
@@ -20,6 +20,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/agent' element={<Agent />} />
         <Route path='/project' element={<Project />} />    
+        <Route path='/other' element={<Other />} />    
       </Routes>
       <Footer />
       

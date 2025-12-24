@@ -237,9 +237,10 @@ const Fullnav = () => {
             </div>
           </div>
           </a>
+          <a href="/other">
           <div className="link origin-top border-t-[0.1px] relative h-auto overflow-hidden">
             <h1 className="font-[f2] text-[8vw] uppercase pt-5 leading-20 ">
-              Project
+              Other
             </h1>
             <div className="movelink absolute top-0 left-0 w-full h-full grid place-items-center  items-center overflow-hidden bg-[#93c400] text-black">
               <div className="relative flex w-max gap-6">
@@ -283,6 +284,7 @@ const Fullnav = () => {
               </div>
             </div>
           </div>
+          </a>
         </div>
       </div>
     </div>

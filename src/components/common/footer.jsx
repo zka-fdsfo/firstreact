@@ -73,7 +73,7 @@ const Footer = () => {
 
       {/* GREEN BRAND STRIP */}
       <div className="bg-[#b7f000] w-full overflow-hidden">
-        <h1 className="text-black font-black text-[18vw] leading-none uppercase translate-x-[-5%]">
+        <h1 className="text-black font-black text-[18vw] leading-none uppercase translate-x-[5%]">
           inspirux →
         </h1>
       </div>

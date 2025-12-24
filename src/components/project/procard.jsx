@@ -1,11 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import React from "react";
 
-const Procard = (p) => {
+const procard = (p) => {
 
   
   return (
-    <div className="w-full min-h-[40vw] flex flex-col lg:flex-row gap-2 mb-2">
+    <div className="w-full min-h-[30vw] flex flex-col lg:flex-row gap-2 mb-2">
       
       {/* CARD 1 */}
       <div className="group lg:w-1/2 w-full h-full lg:h-[30vw] relative overflow-hidden hover:rounded-2xl transition-all">
@@ -65,4 +65,4 @@ const Procard = (p) => {
   );
 };
 
-export default Procard;
+export default procard;
