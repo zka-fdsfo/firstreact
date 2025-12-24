@@ -2,85 +2,93 @@ import React from "react";
 
 const Other = () => {
   return (
-    <section className="w-full min-h-screen bg-[#0b0b0f] flex items-center justify-center px-10">
-      {/* MAIN CARD */}
-      <div className="relative w-full max-w-6xl rounded-[28px] bg-[#f7f3fa] overflow-hidden shadow-2xl">
+    <section className="w-full min-h-screen bg-black px-4 pt-50 py-8 flex justify-center">
+      <div
+        className="
+          w-full max-w-7xl
+          grid grid-cols-1 gap-4
+          md:grid-cols-12 md:grid-rows-2 md:gap-6
+        "
+      >
+        {/* LEFT BIG CARD */}
+        <div className="md:col-span-7 md:row-span-1 relative rounded-3xl overflow-hidden bg-black min-h-[260px] md:min-h-[360px]">
+          <img
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80"
+            className="absolute inset-0 w-full h-full object-cover opacity-80"
+            alt=""
+          />
 
-        {/* TOP AWARDS BAR */}
-        <div className="flex justify-between px-10 pt-6 text-xs text-black/70">
-          <div className="flex gap-10">
-            <p>awwwards <span className="ml-1 font-semibold">4</span></p>
-            <p>CSSDesignAwards <span className="ml-1 font-semibold">18</span></p>
-            <p>No-Code Conf 2021 <span className="ml-1 font-semibold">1</span></p>
-            <p>awwwards <span className="ml-1 font-semibold">4</span></p>
-          </div>
-        </div>
+          <div className="relative z-10 p-6 md:p-10">
+            <h1 className="text-[10vw] md:text-[5vw] leading-none font-black text-[#c8ff00]">
+              STAY<br />CONNECTED
+            </h1>
 
-        {/* HERO AREA */}
-        <div className="relative h-[420px] flex items-center justify-center">
-          {/* BIG TEXT */}
-          <h1 className="absolute text-[22vw] font-black text-black leading-none opacity-95 select-none">
-            more
-          </h1>
-
-          {/* FLOATING CARDS */}
-          <div className="relative z-10 flex items-center justify-center">
-            <img
-              src="https://via.placeholder.com/220x280/0f172a/ffffff?text=Card+1"
-              className="absolute -translate-x-20 rotate-[-6deg] rounded-xl shadow-xl"
-              alt=""
-            />
-            <img
-              src="https://via.placeholder.com/260x320/22c55e/ffffff?text=Empower+Growth"
-              className="relative rounded-xl shadow-2xl"
-              alt=""
-            />
-            <img
-              src="https://via.placeholder.com/220x280/052e16/ffffff?text=Card+3"
-              className="absolute translate-x-24 rotate-[8deg] rounded-xl shadow-xl"
-              alt=""
-            />
-          </div>
-        </div>
-
-        {/* INFO ROW */}
-        <div className="grid grid-cols-3 px-10 py-8 text-sm border-t border-black/10">
-          <div>
-            <p className="text-black/40 mb-2">category</p>
-            <p className="text-xl font-semibold">summon</p>
-          </div>
-
-          <div>
-            <p className="text-black/40 mb-2">description</p>
-            <p className="leading-relaxed">
-              We've partnered with Summon to create a brand-new website to build
-              excitement for and launch their product.
+            <p className="mt-4 md:mt-6 max-w-md text-xs md:text-sm text-white/80">
+              CLEAN AND SIMPLE AFTER EFFECTS TEMPLATE 3 IN 1 FOR CREATING
+              A STYLISH EVENT OPENER, A FASHION VIDEO, OR AN INSPIRING
+              CORPORATE VIDEO SLIDESHOW.
             </p>
           </div>
 
-          <div>
-            <p className="text-black/40 mb-2">links</p>
-            <p className="underline cursor-pointer">View Project</p>
+          <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-8 h-8 rounded-full border border-[#c8ff00] text-[#c8ff00] flex items-center justify-center text-sm">
+            ©
           </div>
         </div>
 
-        {/* GREEN SHOWCASE STRIP */}
-        <div className="relative h-[140px] bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-between px-10 text-white">
-          <p className="text-2xl font-semibold">showcase</p>
+        {/* RIGHT TALL CARD */}
+        <div className="md:col-span-5 md:row-span-2 relative rounded-3xl overflow-hidden bg-gray-200 min-h-[260px] md:min-h-full">
+          {/* ✅ FIXED IMAGE (NO 404) */}
+          <img
+            src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=1200&q=80"
+            className="absolute inset-0 w-full h-full object-cover grayscale"
+            alt=""
+          />
 
-          <div className="flex items-center gap-4">
-            <p className="text-lg font-medium">©/22</p>
-            <p className="text-2xl font-bold">Empower Growth</p>
+          <div className="absolute top-4 left-4 md:top-6 md:left-6 px-4 py-1 rounded-full border border-[#c8ff00] text-[#c8ff00] text-xs font-semibold">
+            SIMPLE
           </div>
 
-          <div className="flex gap-3">
-            <button className="px-4 py-1 rounded-full bg-white text-green-600 text-xs font-semibold">
-              Live
-            </button>
-            <button className="px-4 py-1 rounded-full border border-white text-xs">
-              Showcase
-            </button>
+          <div className="absolute top-4 right-4 md:top-6 md:right-6 w-8 h-8 md:w-10 md:h-10 bg-[#c8ff00] rounded-full"></div>
+        </div>
+
+        {/* BOTTOM LEFT */}
+        <div className="md:col-span-3 relative rounded-3xl overflow-hidden bg-black min-h-[180px]">
+          <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
+            className="absolute inset-0 w-full h-full object-cover grayscale"
+            alt=""
+          />
+
+          <div className="absolute bottom-4 left-4 w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#c8ff00] flex items-center justify-center text-[#c8ff00] text-xl">
+            →
           </div>
+        </div>
+
+        {/* BOTTOM CENTER */}
+        <div className="md:col-span-4 relative rounded-3xl overflow-hidden bg-black min-h-[180px]">
+          <img
+            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+            className="absolute inset-0 w-full h-full object-cover grayscale"
+            alt=""
+          />
+        </div>
+
+        {/* BOTTOM RIGHT GREEN */}
+        <div className="md:col-span-5 rounded-3xl bg-[#c8ff00] p-6 md:p-8 flex flex-col justify-between min-h-[180px]">
+          <div className="flex justify-between items-start">
+            <h2 className="text-3xl md:text-4xl font-black text-black">
+              DESIGN
+            </h2>
+            <span className="text-xs md:text-sm font-bold text-black">
+              MMG
+            </span>
+          </div>
+
+          <p className="text-[10px] md:text-xs text-black max-w-xs">
+            THE TEMPLATE IS VERY CONVENIENT AND FLEXIBLE IN USAGE
+          </p>
+
+          <div className="w-3 h-3 bg-black rounded-full self-end"></div>
         </div>
       </div>
     </section>
