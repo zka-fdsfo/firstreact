@@ -1,0 +1,39 @@
+
+@import "tailwindcss";
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: f1;
+  src: url(../public/font/Lausanne-300.woff2);
+  font-weight: 100;
+}
+@font-face {
+  font-family: f2;
+  src: url(../public/font/Lausanne-500.woff2);
+  font-weight: 100;
+}
+.moveX {
+  animation: moveAnimation 6s linear infinite;
+}
+.movelink{
+  opacity: 0;
+  gap:2px;
+  transition: ease-in 80ms;
+}
+.link:hover .movelink{
+  opacity: 1;
+}
+@keyframes moveAnimation{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}

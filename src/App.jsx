@@ -1,0 +1,28 @@
+
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/home'
+import Agent from './pages/agent'
+import Project from './pages/project'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import Nav from './components/common/nav/nav'
+import Fullnav from './components/common/nav/Fullnav'
+
+
+
+const App = () => {
+  return (
+    <div className=' text-white  '>
+      <Nav />
+      <Fullnav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/agent' element={<Agent />} />
+        <Route path='/project' element={<Project />} />    
+      </Routes>
+      
+    </div>
+  )
+}
+
+export default App
