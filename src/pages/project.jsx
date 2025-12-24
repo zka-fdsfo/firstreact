@@ -1,5 +1,5 @@
 import React from "react";
-import Procard from "../components/project/procard";
+import Procard from "../components/project/Procard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
