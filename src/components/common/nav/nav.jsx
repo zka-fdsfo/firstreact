@@ -1,27 +1,25 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { Navbar, Navbarcol } from "../../../context/Navcontext";
-const nav = ({ children }) => {
-  const nav1 = useRef(null);
-  const navcol1 = useRef(null);
-  const navcol2 = useRef(null);
 
+const Nav = ({ children }) => {
+  const nav1 = useRef(null);
   const [navopen, setnavopen] = useContext(Navbar);
   const [navopencol, setnavopencol] = useContext(Navbarcol);
-  const col = navopencol === "white" ? "black" : "white";
-  console.log("hi",navopencol);
-
   
+  // Local state to handle the hover effect
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Logic for the bar colors
+  // 1. If hovered, bars are always black (because of the lime background)
+  // 2. If not hovered, bars depend on the context (navopencol)
+  const barColor = isHovered ? "black" : (navopencol === "white" ? "black" : "white");
+
   return (
-    <>
-    <div className="z-30 flex fixed top-0 w-full items-start justify-between ">
+    <div className="z-30 flex fixed top-0 w-full items-start justify-between">
       <div className="p-3">
-        <div className=" w-30 h-20">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 103 44"
-            className=" h-full w-full"
-          >
-            <path
+        <div className="w-30 h-20">
+          <svg viewBox="0 0 103 44" className="h-full w-full">
+             <path
             
               fill="white"
               fillRule="evenodd"
@@ -30,39 +28,34 @@ const nav = ({ children }) => {
           </svg>
         </div>
       </div>
-      <div onClick={() => {
-        setnavopen(true)
-      }}
+
+      <div 
+        onClick={() => setnavopen(true)}
         onMouseEnter={() => {
-
+          setIsHovered(true);
           nav1.current.style.height = "100%";
-          nav1.current.style.backgroundColor = "#D3FD50";
-          navcol1.current.style.backgroundColor = 'black'
-          navcol2.current.style.backgroundColor = 'black'
-
         }}
         onMouseLeave={() => {
+          setIsHovered(false);
           nav1.current.style.height = "0%";
-          navcol1.current.style.backgroundColor = {loc}
-          navcol2.current.style.backgroundColor = {loc}
-
-
         }}
-        className="   h-16 w-[50vw]  lg:h-16 lg:w-[20vw] relative  " style={{ backgroundColor: navopencol }}
+        className="h-16 w-[50vw] lg:h-16 lg:w-[20vw] relative" 
+        style={{ backgroundColor: navopencol }}
       >
         <div
           ref={nav1}
-          className="  absolute top-0  transition-all h-full w-full "
+          className="absolute top-0 transition-all w-full bg-[#D3FD50]"
+          style={{ height: "0%" }} // Controlled by ref for animation speed
         ></div>
-        <div className="  h-full w-full relative flex flex-col items-end justify-center px-8 gap-2  ">
-          <div ref={navcol1} className="w-20 h-0.5 bg-white " style={{ backgroundColor: col }}></div>
-          <div ref={navcol2} className="w-16 h-0.5 bg-white " style={{ backgroundColor: col }}></div>
+
+        <div className="h-full w-full relative flex flex-col items-end justify-center px-8 gap-2">
+          {/* Removed bg-white and refs for color, using barColor state instead */}
+          <div className="w-20 h-0.5 transition-colors duration-300" style={{ backgroundColor: barColor }}></div>
+          <div className="w-16 h-0.5 transition-colors duration-300" style={{ backgroundColor: barColor }}></div>
         </div>
       </div>
     </div>
-    </>
-    
   );
 };
 
-export default nav;
+export default Nav;

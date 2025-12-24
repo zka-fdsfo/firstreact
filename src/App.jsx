@@ -13,7 +13,7 @@ import Other from './pages/other'
 
 const App = () => {
   return (
-    <div className=' text-white  '>
+    <div className=' text-white overflow-hidden  '>
       <Nav />
       <Fullnav />
       <Routes>

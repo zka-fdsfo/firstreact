@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white overflow-hidden">
+    <footer className="w-full h-full bg-black text-white overflow-hidden">
       {/* TOP SECTION */}
       <div className="px-10 pt-10 pb-20 relative">
         {/* Top bar */}

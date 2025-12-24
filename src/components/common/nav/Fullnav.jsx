@@ -56,7 +56,7 @@ const Fullnav = () => {
   return (
     <div ref={fullscreennav}
       id="fullscreennav"
-      className="h-screen w-screen text-center  hidden  absolute z-50 text-white  overflow-y-hidden"
+      className="h-screen w-screen text-center  hidden  absolute z-50 text-white  overflow-hidden "
     >
       <div className="navli h-screen w-screen fixed overflow-hidden ">
         <div className="flex h-full w-full">

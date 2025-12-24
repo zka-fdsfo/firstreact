@@ -5,14 +5,15 @@ export const Navbar = createContext();
 export const Navbarcol = createContext();
 
 const Navcontext = ({ children }) => {
-   const [navopencol, setnavopencol] = useState('black');
+  const [navopencol, setnavopencol] = useState('black');
   const [navopen, setnavopen] = useState(false);
  
   const loc=useLocation().pathname;
  useEffect(function(){
   if(loc == '/project'|| loc == '/agent'){
     setnavopencol('white')
-  }else{
+  }
+  else{
     setnavopencol('black')
   }
  },[loc])
