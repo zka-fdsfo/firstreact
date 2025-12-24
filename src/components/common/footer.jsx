@@ -6,7 +6,7 @@ const Footer = () => {
       {/* TOP SECTION */}
       <div className="px-10 pt-10 pb-20 relative">
         {/* Top bar */}
-        <div className="flex justify-between text-xs tracking-widest uppercase opacity-80">
+        <div className="flex lg:justify-between flex-row flex-wrap text-xs mb-2.5 tracking-widest uppercase opacity-80">
           <div>
             <p>Drop us a line, and we'll</p>
             <p>get in touch!</p>
@@ -18,7 +18,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex mt-2.5 gap-8 flex-row flex-wrap">
             <a href="#">Dribbble</a>
             <a href="#">Behance</a>
             <a href="#">LinkedIn</a>
