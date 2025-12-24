@@ -36,24 +36,41 @@ const project = () => {
 
   ];
 
-  useGSAP(() => {
-    gsap.from(".hero", {
-      stagger:{
-      amount:0.4,
-     },
-     height:'5vw',
-     scrollTrigger:{
-      trigger:'.lol',
-    
-      start:'top 100%',
-      end:'top -250%',
-      scrub:true
-     },
-    
+useGSAP(() => {
+  const mm = gsap.matchMedia();
 
-     
+  // DESKTOP (lg screens)
+  mm.add("(min-width: 1024px)", () => {
+    gsap.from(".hero", {
+      stagger: 0.2,
+      height: "5vw",
+      scrollTrigger: {
+        trigger: ".lol",
+        start: "top 90%",
+        end: "top -250%",
+        scrub: true,
+      },
     });
   });
+
+  // MOBILE (phones)
+  mm.add("(max-width: 1023px)", () => {
+    gsap.from(".hero", {
+      stagger: 0.15,
+      y: 80,          // move from bottom instead of height
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".lol",
+        start: "top 95%",
+        end: "top 20%",
+        scrub: 1,
+      },
+    });
+  });
+
+  return () => mm.revert();
+});
+
 
   return (
     <div className="lg:p-2 p-5">
