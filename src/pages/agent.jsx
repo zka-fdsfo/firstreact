@@ -45,7 +45,7 @@ const Agent = () => {
   });
 
   return (
-    <div>
+    <div className="mb-[300vw] lg:mb-50 ">
       <div className="s1 h-full py-1">
         {/* Floating image container */}
         <div
@@ -85,7 +85,136 @@ const Agent = () => {
         </div>
       </div>
 
-      <div className="s2 h-screen w-full"></div>
+      <div className="s2 h-screen w-full">
+      <section className="relative w-full min-h-screen bg-black text-white px-4 py-8">
+      {/* GRID BACKGROUND */}
+      <div
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)",
+          backgroundSize: "36px 36px",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto space-y-10">
+
+        {/* TOP SECTION */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+          {/* LEFT */}
+          <div className="lg:col-span-7 space-y-5">
+
+            {/* STATS */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p className="text-[#c8ff00] text-2xl font-bold">207K</p>
+                <p className="text-sm">Mentors</p>
+                <p className="text-xs text-white/60 mt-2">
+                  Expert mentors ready to guide you.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p className="text-[#c8ff00] text-2xl font-bold">500K</p>
+                <p className="text-sm">Active users</p>
+                <p className="text-xs text-white/60 mt-2">
+                  Users who found their ideal mentor.
+                </p>
+              </div>
+            </div>
+
+            {/* HERO */}
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-snug">
+                UNLOCK YOUR <br />
+                LEADERSHIP POTENTIAL WITH US!
+              </h1>
+
+              <button className="mt-5 w-10 h-10 rounded-full border border-[#c8ff00] text-[#c8ff00] flex items-center justify-center">
+                →
+              </button>
+            </div>
+          </div>
+
+          {/* RIGHT HERO IMAGE */}
+          <div className="lg:col-span-5 relative rounded-2xl overflow-hidden border border-white/10 min-h-[260px]">
+            {/* ✅ WORKING IMAGE */}
+            <img
+              src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=900&q=80"
+              className="absolute inset-0 w-full h-full object-cover grayscale"
+              alt="mentor"
+            />
+
+            <div className="relative z-10 h-full p-6 bg-black/40 flex flex-col justify-between">
+              <div>
+                <h2 className="text-xl md:text-2xl font-semibold">
+                  Book your first <br /> free meeting
+                </h2>
+                <p className="text-xs text-white/70 mt-2">
+                  Get insights into the process and next steps.
+                </p>
+              </div>
+
+              <button className="self-start px-4 py-2 text-xs rounded-full border border-[#c8ff00] text-[#c8ff00]">
+                Get in Touch →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* MENTORS */}
+        <div className="space-y-6">
+          <h2 className="text-xl md:text-2xl font-semibold">Mentors</h2>
+
+          {/* FILTER */}
+          <div className="flex flex-wrap gap-4 text-xs sm:text-sm text-white/60">
+            <span className="text-[#c8ff00]">All</span>
+            <span>UI/UX</span>
+            <span>Science & Technology</span>
+            <span>Finance & Investment</span>
+          </div>
+
+          {/* CARDS */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {Array.from({ length: 3 }).map((_, i) => (
+              <div
+                key={i}
+                className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 min-h-[320px]"
+              >
+                {/* ✅ SAFE IMAGE */}
+                <img
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
+                  className="absolute inset-0 w-full h-full object-cover grayscale"
+                  alt="mentor"
+                />
+
+                <div className="relative z-10 p-5 h-full bg-black/50 flex flex-col justify-between">
+                  <span className="inline-flex items-center gap-2 text-xs bg-white/10 px-3 py-1 rounded-full w-fit">
+                    Python Developer
+                    <span className="text-[#c8ff00]">4.9 ★</span>
+                  </span>
+
+                  <div>
+                    <h3 className="text-lg font-semibold">Ethan Caldwell</h3>
+                    <p className="text-xs text-white/60">
+                      20 years of experience
+                    </p>
+
+                    <button className="mt-4 w-9 h-9 rounded-full bg-[#c8ff00] text-black flex items-center justify-center">
+                      ↗
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      </div>
     </div>
   );
 };

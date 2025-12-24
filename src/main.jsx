@@ -8,8 +8,7 @@ import Navcontext from './context/Navcontext.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <Stare>
-    <Navcontext>
-        
+    <Navcontext>       
     <App />
     </Navcontext>
   </Stare>
