@@ -1,7 +1,9 @@
 import React from "react";
+import { motion } from "motion/react"
 
 const Other = () => {
   return (
+    <>
     <section className="w-full min-h-screen bg-black px-4 pt-50 py-8 flex justify-center">
       <div
         className="
@@ -91,7 +93,18 @@ const Other = () => {
           <div className="w-3 h-3 bg-black rounded-full self-end"></div>
         </div>
       </div>
+      
     </section>
+    <div>
+        <motion.div className="box h-52 w-52 bg-blue-400"
+        animate={{
+          x:800
+        }}
+         whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+        ></motion.div>
+      </div>
+    </>
   );
 };
 

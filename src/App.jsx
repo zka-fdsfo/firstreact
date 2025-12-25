@@ -9,7 +9,7 @@ import Nav from './components/common/nav/nav'
 import Fullnav from './components/common/nav/Fullnav'
 import Footer from './components/common/footer'
 import Other from './pages/other'
-
+import ProjectDetails from './pages/ProjectDetails'
 
 const App = () => {
   return (
@@ -20,7 +20,8 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/agent' element={<Agent />} />
         <Route path='/project' element={<Project />} />    
-        <Route path='/other' element={<Other />} />    
+        <Route path='/other' element={<Other />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />    
       </Routes>
       <Footer />
       
