@@ -80,7 +80,7 @@ const ProjectDetails = () => {
 </motion.h1> */}
 
       {/* FOREGROUND CONTENT */}
-      <div className="relative z-10 pt-32  lg:m-5 lg:p-20 lg:pt-32 text-white">
+      <div className="relative z-10 pt-32 m-6 lg:m-5 lg:p-20 lg:pt-32 text-white">
 
         <motion.h2
           initial={{ y: 40, opacity: 0 }}
