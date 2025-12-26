@@ -1,5 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
+import GradientText from "./GradientText";
+
+// For a smoother animation, the gradient should start and end with the same color
+  
 
 const ProjectDetails = () => {
   const { state } = useLocation();
@@ -17,16 +21,24 @@ const ProjectDetails = () => {
 
   return (
     <div
-      className="relative min-h-screen mt-32 bg-black overflow-hidden"
-      onMouseMove={(e) => {
-        if (!isMobile) {
-          mouseX.set(e.clientX);
-          mouseY.set(e.clientY);
-        }
-      }}
+      className="relative min-h-screen mt-32 bg-black overflow-hidden "
+   
     >
+<GradientText
+  colors={ ["#9CA3AF", "#ffffff", "#D3FD50", "#ffffff", "#9CA3AF"]
+}
+  animationSpeed={3}
+  showBorder={false}
+  className="lg:ml-20 ml-5 custom-class absolute top-24 lg:left-6 
+    text-[15vw] lg:text-[11vw]
+    font-[f2] uppercase leading-none
+    pointer-events-none select-none"
+>
+    {state.title}
+</GradientText>
       {/* BIG BACKGROUND TITLE */}
-  <motion.h1
+
+  {/* <motion.h1
   initial={{ y: 200, opacity: 0 }}
   animate={{ y: 0, opacity: isMobile ? 1 : 0.35 }}
   transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
@@ -39,11 +51,11 @@ const ProjectDetails = () => {
   style={
     isMobile
       ? {
-          /* 📱 MOBILE — CLEAN, NO EFFECT */
+     
           color: "#d3fd50",
         }
       : {
-          /* 🖥️ DESKTOP — BRIGHTER LIGHT FOLLOW */
+          
           color: "#d3fd50",
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(
@@ -65,10 +77,10 @@ const ProjectDetails = () => {
   }
 >
   {state.title}
-</motion.h1>
+</motion.h1> */}
 
       {/* FOREGROUND CONTENT */}
-      <div className="relative z-10 p-6 pt-[45vh] lg:p-20 lg:pt-72 text-white">
+      <div className="relative z-10 pt-32  lg:m-5 lg:p-20 lg:pt-32 text-white">
 
         <motion.h2
           initial={{ y: 40, opacity: 0 }}
@@ -108,6 +120,7 @@ const ProjectDetails = () => {
           />
         </div>
       </div>
+
     </div>
   );
 };
